@@ -1,8 +1,19 @@
 package com.Spring_Project_4.Spring_Project_4.course.jdbc;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name = "Course_Details")
 public class Course {
+
+    @Id
     private long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "author")
     private String author;
 
     public Course() {
@@ -26,6 +37,18 @@ public class Course {
 
     public String getAuthor() {
         return author;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     @Override
